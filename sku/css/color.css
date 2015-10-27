@@ -1,0 +1,278 @@
+body {
+    background-color: #aaa;
+    transition: 1s;
+}
+
+/*@keyframes jianbian {*/
+/*from{opacity:0;}*/
+/*to{opacity:0.8;}*/
+/*}*/
+.disabled {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.type {
+
+    opacity: 0;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 600px;
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes xia {
+    from {
+        background-position-y: -100px;
+    }
+    to {
+        background-position-y: 100px;
+    }
+}
+
+.down:before {
+    content: "";
+    display: block;
+    animation: xia 3s infinite;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    background: url(../img/xia.png) no-repeat;
+    background-size: 30px;
+    background-position-x: 10px;
+    background-position-y: 0;
+
+}
+
+/*.jianbian{*/
+/*transition-duration: 1s;*/
+/*animation: jianbian 3s;*/
+/*}*/
+#box {
+    /*padding-top:300px;*/
+    text-align: center;
+}
+
+.vitta {
+    /*padding: 5px;*/
+    transition: .8s;
+    position: relative;
+    z-index: 100;
+    margin: 50px auto;
+    width: 800px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.slider {
+    opacity: 0;
+    top: 0;
+    transition: .8s ease-out 0s;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../img/slider.png) 10px 10px no-repeat;
+    background-size: 30px;
+
+}
+
+.row0 {
+    background-color: #ff0000;
+}
+
+.unhover {
+    opacity: .5
+}
+
+/*.row0>input[attr_id^='3'],.row0>input[attr_id^='5'],.row0>input[attr_id^='6']{*/
+/*background-color: #000000;*/
+/*}*/
+/*.row0>input[attr_id^='7'],.row0>input[attr_id^='9']{*/
+/*left:25%;*/
+/*background-color: #002f40;*/
+/*}*/
+/*.row0>input[attr_id^='A'],.row0>input[attr_id^='B'] {*/
+/*left:50%;*/
+/*background-color: #0ff340;*/
+/*}*/
+/*.row0>input[attr_id^='D'],.row0>input[attr_id^='F'] {*/
+/*left:75%;*/
+/*background-color: #1f2ffd;*/
+/*}*/
+.row1 {
+    background-color: #00ff00;
+}
+
+.row2 {
+    background-color: #0000ff;
+}
+
+@keyframes balljianbian {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.bh-sku-selected {
+    /*border: blue 1px solid;*/
+    animation: balljianbian 3s infinite;
+    background: url(../img/ball.png) 10px 10px no-repeat;
+    background-size: 30px;
+}
+
+.sku {
+    /*position:absolute;*/
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+/*@keyframes smallToBig {*/
+/*from{background-size:0px}*/
+/*to {background-size:400px}*/
+/*}*/
+
+@keyframes smallToBig {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+@keyframes ballrotate {
+    from {
+        opacity: 0;
+        transform: translateX(-500px) rotate(0deg);
+    }
+    to {
+        opacity: 0.7;
+        transform: translateX(900px) rotate(720deg);
+    }
+}
+
+@keyframes ballup {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes balldown {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(30px);
+    }
+}
+.fire-monkey {
+    position: absolute;
+    left: 5%;
+    bottom: 20px;
+    opacity: 0.7;
+    height: 400px;
+    width: 400px;
+    background: url(../img/fire-monkey2.png) no-repeat;
+    background-size: 400px;
+    animation: smallToBig 2s;
+}
+
+.fire-dragon {
+    position: absolute;
+    right: 5%;
+    bottom: 20px;
+    opacity: 0.7;
+    height: 400px;
+    width: 400px;
+    background: url(../img/fire-dragon-Mega_X.png) no-repeat;
+    background-size: 400px;
+    transition: .8s;
+
+    animation: opacity 2s;
+}
+
+@keyframes rotateChange {
+    0% {
+        transform: rotateY(0deg);
+        background-size: 400px;
+    }
+    49%{background: url(../img/fire-dragon-Mega_X.png) no-repeat;background-size: 400px;}
+    50% {
+        transform: rotateY(90deg);
+        background: url(../img/fire-dragon-Mega_Y.png) no-repeat;
+        background-size: 400px;
+    }
+    100% {
+        background: url(../img/fire-dragon-Mega_Y.png) no-repeat;
+        transform: rotateY(180deg);
+        background-size: 400px;
+    }
+
+}
+
+.fire-dragon:hover {
+    background: url(../img/fire-dragon-Mega_Y.png) no-repeat;
+    background-size: 400px;
+    /*transform: rotateY(180deg);*/
+    /*animation: rotateChange 1s forwards;*/
+
+}
+
+.monster-ball{
+    position: absolute;
+    top: 5%;
+    opacity: 0.7;
+    height: 200px;
+    width: 200px;
+    background: url(../img/monsterball.png) no-repeat;
+    background-size: 200px;
+    animation: ballrotate 2s forwards;
+}
+
+.monster-ball-up,.monster-ball-down{
+    transition: 0.5s ease-out;
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0.7;
+    height: 200px;
+    width: 200px;
+
+}
+.monster-ball2{animation: opacity 1s forwards}
+.monster-ball2:hover .monster-ball-up{
+    transform: translateY(-30px) ;
+}
+.monster-ball2:hover .monster-ball-down{
+    transform: translateY(30px);
+}
+.monster-ball-up{
+    background: url(../img/monsterball-up.png) no-repeat;
+    background-size: 200px;
+}
+
+.monster-ball-down{
+    background: url(../img/monsterball-down.png) no-repeat;
+    background-size: 200px;
+    /*animation: balldown 1s forwards;*/
+}
